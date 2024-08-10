@@ -1,3 +1,55 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$primary: #FC480A;
+$secondary: #F98900;
+$light: #C9C3BD;
+$dark: #222222;
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $light;
+  font-family: 'Raleway', sans-serif;
+}
+
+p, i {
+  color: $light;
+  font-family: 'Rubik', sans-serif;
+}
+
+li {
+  color: $light
+}
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  background-color: #333333; 
+  border-radius: 24px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ul:last-child {
+    margin-bottom: 0;
+
+    li:last-child p:last-child {
+      margin-bottom: 0;
+    };
+  }
+}
+
+.button-group {
+  a {
+    text-decoration: none;
+  }
+}
+
+body {
+  background: $dark;
+}
+
+// gradient button w/ custom states
+
 @property --color1 {
   syntax: '<color>';
   initial-value: #FC480A;
@@ -10,58 +62,10 @@
   inherits: false;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  color: #C9C3BD;
-  font-family: 'Raleway', sans-serif;
-}
-
-p, i {
-  color: #C9C3BD;
-  font-family: 'Rubik', sans-serif;
-}
-
-li {
-  color: #C9C3BD
-}
-
-.main {
-  overflow: auto;
-  padding-bottom: 150px;
-}
-
-.profile-image {
-  height: 128px;
-  width: 128px;
-  border: 8px solid transparent;
-  background: linear-gradient(to left, #FC480A, #F98900);
-  background-origin: border-box;
-  background-clip: border-box;
-  border-radius: 28px;
-}
-
-.page-title {
-  display: flex;
-  align-items: center;
-  height: 128px;
-  color: #C9C3BD;
-  font-family: 'Raleway', sans-serif;
-}
-
-.vert-divider {
-  width: 2px;
-  margin-left: 32px;
-  margin-right: 32px;
-  background: #C9C3BD;
-  border-radius: 1px;
-}
-
-body {
-  background: #222222;
-}
-
 button {
   display: flex;
   align-items: center;
+  align-self: flex-start;
   height: 40px;
   padding-top: 16px;
   padding-bottom: 16px;

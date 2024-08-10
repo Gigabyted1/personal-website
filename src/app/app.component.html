@@ -1,12 +1,29 @@
 <div class="min-vh-100 d-flex flex-column justify-content-between">
+  
   <div>
-    <div class="d-flex">
-      <h2 class="profile-text" routerLink="/">Wayne Bloom</h2>
+    <div class="my-bg-gradient">
+      <div class="container d-flex justify-content-between w-100 py-2">
+        <div routerLink="/" class="nav-bar-me d-flex gap-3">
+          <img
+            class="profile-image"
+            src="/assets/img/profile-new.png"
+            alt="a stylized picture of my face">
+
+          <h4 class="my-auto">Wayne Bloom</h4>
+        </div>
+          <nav class="d-flex gap-4 align-items-end">
+            <a routerLink="/about" routerLinkActive="nav-bar-active"><h5>About Me</h5></a>
+            <a routerLink="/portfolio" routerLinkActive="nav-bar-active"><h5>Portfolio</h5></a>
+          </nav>
+      </div>
     </div>
 
-    <router-outlet></router-outlet>
-  </div>
+    <div class="container my-4">
+      <router-outlet></router-outlet>
+    </div>
 
+  </div>
+  
   <footer class="m-4">
     <div class="container d-flex justify-content-between">
       <div class="col-xs-auto d-flex flex-column">
